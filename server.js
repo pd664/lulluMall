@@ -27,13 +27,13 @@ const credentialSchema = require("./schema/credentialSchema");
 const ResultSchema = require("./schema/sapreSchema");
 // const { createResult } = require('./createResult')
 // const { tick, second } = require('./timer')
-// const io = socketIo(server);
+const io = socketIo(app);
 
-const io = socketIo(server, {
-  cors: {
-    origin: "*"
-  }
-});
+// const io = socketIo(server, {
+//   cors: {
+//     origin: "*"
+//   }
+// });
 // const rootSocket = require('./socket')(io)
 io.on("connection", (socket) => {
   console.log("New client connected", socket.handshake.headers.origin);
