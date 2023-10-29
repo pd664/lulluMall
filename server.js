@@ -5,7 +5,7 @@ const socketIo = require("socket.io");
 const port = process.env.PORT || 3000;
 const app = express();
 const server = http.createServer(app);
-// const cors = require('cors')
+const cors = require('cors')
 var jwt = require('jsonwebtoken');
 
 const mongoose = require("mongoose");
@@ -27,13 +27,13 @@ const credentialSchema = require("./schema/credentialSchema");
 const ResultSchema = require("./schema/sapreSchema");
 // const { createResult } = require('./createResult')
 // const { tick, second } = require('./timer')
-const io = socketIo(server);
+// const io = socketIo(server);
 
-// const io = socketIo(server, {
-//   cors: {
-//     origin: "*"
-//   }
-// });
+const io = socketIo(server, {
+  cors: {
+    origin: "*"
+  }
+});
 // const rootSocket = require('./socket')(io)
 io.on("connection", (socket) => {
   console.log("New client connected", socket.handshake.headers.origin);
