@@ -1,0 +1,82 @@
+.bg-gray {
+    background-color: #F1F1F1;
+}
+
+.pri_heading {
+    height: 62px;
+    min-height: 0;
+    box-shadow: 0px 0px 0px;
+    z-index: 9999;
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.pri_heading_cont {
+    font-size: 20px;
+}
+
+.pri_heading_cont::before {
+    content: "<";
+}
+
+/* .cred_form {
+    background-color: none;
+} */
+
+.signup_form_cont {
+    background-color: none;
+}
+
+.form_input_container {
+    height: 80px;
+}
+
+.form_input_container_cont {
+    height: 80px;
+}
+
+.form_input_container_cont > input {
+    border: 1px solid whitesmoke;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.form_input_container_cont > input:active {
+    border: 1px solid white;
+}
+
+.cu-form-group {
+    background-color: #fff;
+    padding: 1px 18px;
+    /* display: flex; */
+    /* align-items: center; */
+    min-height: 61px;
+    margin-top: 0 !important;
+    /* justify-content: space-between; */
+}
+
+.cred_form {
+    margin-top: 0rem !important;
+    position: relative;
+}
+
+.btn_cred {
+    width: fit-content;
+    padding: 0.5rem 5rem;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+}
+
+.register_btn {
+    width: 5rem,;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}

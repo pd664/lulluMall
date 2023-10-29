@@ -1,0 +1,17 @@
+.sign_in_link {
+    text-decoration: none;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.sign_in_link_cont {
+    /* padding: 2rem; */
+}
+
+.sign_in_link:hover {
+    cursor: pointer;
+    color: black;
+}

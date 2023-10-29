@@ -1,0 +1,34 @@
+.uni-scroll-ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.scroll-btn {
+    width: 100%;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.home_btn {
+  border: none;
+  background-color: white;
+  color: gray;
+  width: 100%;
+  height: 3rem;
+}
+
+.activeNew {
+  color: blue;
+  border-bottom: 1px solid blue;
+  /* width: 100%; */
+}
+
+.uni-scroll-btn {
+  height: 3rem;
+}

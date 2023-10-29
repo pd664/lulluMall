@@ -1,0 +1,70 @@
+.addAmountPopup {
+    background-color: #fff;
+    color: #666;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    width: 418px;
+    max-width: 100%;
+    /* background-color: #f8f8f8; */
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: border-box
+}
+
+.selected_num {
+    height: 4rem;
+}
+
+.p-sec {
+    font-size: 18px;
+}
+
+.select_cont {
+    /* font-family: bolder; */
+}
+
+.amt_qty{
+    border: none;
+    background-color: transparent;
+    padding: 10px 1rem;
+    color: #666;
+}
+
+.amt_qty:hover {
+    cursor:auto;
+}
+
+.number_btn {
+    border: none;
+    width: 2rem;
+    height: 38px;
+}
+
+.number_cont {
+    background-color: white;
+    width: 6rem;
+    margin-bottom: 0;
+}
+
+.number_change {
+    height: 40px;
+}
+
+.add_amt_footer_btn {
+    background-color: #efefef;
+    border: none;
+    padding: 0.7rem 0.8rem;
+}
+
+.add_amt_close {
+    color: #919191;
+}
+
+.add_amt_confirm {
+
+}
+
+.add_amt_footer_btn:hover {}

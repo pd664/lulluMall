@@ -1,0 +1,47 @@
+.header {
+    background-color: rgb(0,129,255);
+    height: 7rem;
+    color: white;
+    font-size: 18px;
+}
+
+.header_link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+}
+
+.recharge_cont {
+    background-color: rgb(57,181,74);
+    box-shadow: 3px 3px 4px rgba(48,156,63,.2);
+    margin-top: 18px;
+}
+
+.rule_cont {
+    background-color: white;
+    color: gray;
+}
+
+.recharge_cont:hover {
+    color: white;
+}
+
+.rule_cont:hover {
+    color: gray;
+}
+
+/* .header_link:hover {
+    transform: translate(1px,1px);
+    text-decoration: none;
+    /* color: white; */
+/* }  */
+
+.header_bttm_links> div {
+    margin-right: 20px;
+}
+
+/* .refresh_icon, .header_refresh {
+    color: white !important;
+} */

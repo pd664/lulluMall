@@ -1,0 +1,85 @@
+.period {
+    background-color: rgb(241,241,241);
+}
+
+#blur {
+    pointer-events: none;
+    filter: contrast(50%);; 
+    overflow: none;
+}
+
+.p_sub {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.period_colors_btn {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 0.7rem 1.7rem;
+}
+
+.join_green{
+    background-color: rgb(57,181,74)
+}
+
+.join_violet {
+    background-color: rgb(103,57,182);
+}
+
+.join_red {
+    background-color: rgb(229,77,66);
+}
+
+.period_btn_cont {
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    /* color: black; */
+}
+
+.period_red {
+    background-color: rgb(229,77,66);
+}
+
+.period_green {
+    background-color: rgb(57,181,74)
+}
+
+.period_violet_green {
+    background-image: linear-gradient(160deg, rgb(103, 57, 182) 50%, rgb(57, 181, 74) 50%);
+}
+
+.period_red-violet {
+    background-image: linear-gradient(160deg, rgb(103, 57, 182) 50%, rgb(229, 77, 66) 50%);
+}
+
+/* .disable {
+    pointer-events: none;
+} */
+
+.disable > div > button {
+    opacity: 0.5;
+}
+
+.disable > button {
+    background-color: white;
+    color: gray;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disable {
+    cursor: not-allowed;
+}
+
+.disable > button, .disable > div > button {
+    pointer-events: none;
+}
