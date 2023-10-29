@@ -617,7 +617,7 @@ async function createResult(gameName, arr, persons, colorArr, colorPerson) {
 }
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('blog/build'))
+  app.use(express.static('lullu/build'))
 }
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
