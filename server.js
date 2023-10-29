@@ -27,7 +27,7 @@ const credentialSchema = require("./schema/credentialSchema");
 const ResultSchema = require("./schema/sapreSchema");
 // const { createResult } = require('./createResult')
 // const { tick, second } = require('./timer')
-const io = socketIo(app);
+const io = socketIo(server);
 
 // const io = socketIo(server, {
 //   cors: {
