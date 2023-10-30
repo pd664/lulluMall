@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const cors = require('cors')
 var jwt = require('jsonwebtoken');
-
+const helmet = require('helmet')
 const mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 const bodyParser = require("body-parser");
@@ -19,7 +19,7 @@ const EmardPreviousResult = require('./schema/emardSchema')
 const BconePreviousResult = require('./schema/bconeSchem')
 const utils = require("./utils");
 const parityResult = require('./routes/parityPrevResult')
-// app.use(cors())
+app.use(cors())
 app.use(bodyParser.json());
 
 const { addUser, removeUser, users } = require('./User');
@@ -27,15 +27,25 @@ const credentialSchema = require("./schema/credentialSchema");
 const ResultSchema = require("./schema/sapreSchema");
 // const { createResult } = require('./createResult')
 // const { tick, second } = require('./timer')
-// const io = socketIo(server);
 
-const io = socketIo(server, {
+// const io = socketIo(server);
+app.set('port', (process.env.PORT || 3001));
+var serverws = app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+const io = socketIo(serverws, {
   cors: {
-    origin: "*"
+    origin: "https://lullumalls-c1fcb9537153.herokuapp.com/"
   }
 });
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// const io = socketIo(server, {
+//   cors: {
+//     origin: "*"
+//   }
+// });
 // const rootSocket = require('./socket')(io)
-io.on("connection", (socket) => {
+io.sockets.on("connection", (socket) => {
   console.log("New client connected", socket.handshake.headers.origin);
   // let url_connected = socket.handshake.headers.origin;
   const id = socket.id
@@ -612,7 +622,7 @@ async function createResult(gameName, arr, persons, colorArr, colorPerson) {
   // send result to all connected users
   users.forEach((user) => {
       console.log("user is connected emitted result",`${gameName}_result`, user)
-      io.to(user.id).emit(`${gameName}_result`, res);
+      io.sockets.to(user.id).emit(`${gameName}_result`, res);
   })
 }
 
