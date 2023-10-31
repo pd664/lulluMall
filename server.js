@@ -7,7 +7,6 @@ const app = express();
 const server = http.createServer(app);
 const cors = require('cors')
 var jwt = require('jsonwebtoken');
-const helmet = require('helmet')
 const mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 const bodyParser = require("body-parser");
@@ -38,7 +37,6 @@ const io = socketIo(serverws, {
     origin: "https://lullumalls-c1fcb9537153.herokuapp.com/"
   }
 });
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 // const io = socketIo(server, {
 //   cors: {
 //     origin: "*"
@@ -630,4 +628,4 @@ if(process.env.NODE_ENV === 'production') {
   app.use(express.static('lullu/build'))
 }
 
-server.listen(port, () => console.log(`Listening on port ${port}`));
+// server.listen(port, () => console.log(`Listening on port ${port}`));
