@@ -32,11 +32,7 @@ app.set('port', (process.env.PORT || 3001));
 var serverws = app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-const io = socketIo(serverws, {
-  cors: {
-    origin: "*"
-  }
-});
+const io = socketIo(serverws);
 // const io = socketIo(server, {
 //   cors: {
 //     origin: "*"
