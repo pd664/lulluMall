@@ -34,7 +34,7 @@ var serverws = app.listen(app.get('port'), function() {
 });
 const io = socketIo(serverws, {
   cors: {
-    origin: "https://lullumalls-c1fcb9537153.herokuapp.com/"
+    origin: "*"
   }
 });
 // const io = socketIo(server, {
